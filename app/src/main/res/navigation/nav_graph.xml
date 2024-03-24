@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mehranm1.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_recordFragment"
+            app:destination="@id/recordFragment"
+            app:enterAnim="@anim/enter_frag"
+            app:exitAnim="@anim/exit_frag"
+            app:popEnterAnim="@anim/enter_frag"
+            app:popExitAnim="@anim/exit_frag"/>
+    </fragment>
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="com.example.mehranm1.RecordFragment"
+        android:label="RecordFragment" >
+        <action
+            android:id="@+id/action_recordFragment_to_newCheckPointFragment"
+            app:destination="@id/newCheckPointFragment"
+            app:enterAnim="@anim/enter_frag"
+            app:exitAnim="@anim/exit_frag"
+            app:popEnterAnim="@anim/enter_frag"
+            app:popExitAnim="@anim/exit_frag"/>
+    </fragment>
+    <fragment
+        android:id="@+id/newCheckPointFragment"
+        android:name="com.example.mehranm1.NewCheckPointFragment"
+        android:label="NewCheckPointFragment" />
+</navigation>
